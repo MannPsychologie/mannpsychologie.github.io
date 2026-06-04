@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panikattacken verstehen – was in Ihrem Körper wirklich passiert | Max Mann</title>
+<meta name="description" content="Eine Panikattacke fühlt sich lebensbedrohlich an. Doch was passiert wirklich im Körper? Max Mann, Psychologe und Masterstudent KlIpPs Frankfurt, erklärt die Hintergründe.">
+<meta name="keywords" content="Panikattacke, Panikattacken verstehen, Panikattacke was tun, Angst, Panikattacke Frankfurt, psychologische Beratung Panik">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1923;--slate:#2d4a6b;--steel:#4a6f8a;
+  --white:#f7f9fb;--gold:#b8945a;--gold2:#d4a96a;--gold-light:#f5eed8;
+  --text:#1a2535;--text2:#4a6070;--text3:#7a9aaa;--line:rgba(15,25,35,0.1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.7;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;height:68px;background:rgba(247,249,251,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--navy);text-decoration:none;letter-spacing:0.02em;}
+.nav-brand em{font-style:italic;color:var(--gold);}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--text2);font-size:0.82rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:0.5rem 1.4rem;border-radius:2rem;font-weight:500!important;text-transform:none!important;letter-spacing:0!important;font-size:0.84rem!important;}
+.nav-cta:hover{background:var(--slate)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;border:none;background:none;}
+.hamburger span{width:22px;height:1.5px;background:var(--navy);display:block;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);padding:1.5rem 5vw 2rem;flex-direction:column;gap:1.3rem;z-index:199;}
+.mobile-menu a{text-decoration:none;color:var(--text);font-size:1rem;}
+.mobile-menu.open{display:flex;}
+.article-hero{padding:120px 5vw 4rem;background:var(--navy);color:#fff;}
+.article-hero-inner{max-width:760px;margin:0 auto;}
+.breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;}
+.breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+.article-cat{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;display:block;}
+.article-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;line-height:1.18;margin-bottom:1.2rem;}
+.article-meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);}
+.article-body{max-width:760px;margin:0 auto;padding:4rem 5vw 5rem;}
+.article-lead{font-size:1.1rem;color:var(--text2);line-height:1.8;margin-bottom:2.5rem;font-style:italic;border-left:3px solid var(--gold);padding-left:1.5rem;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin:2.5rem 0 1rem;line-height:1.25;}
+.article-body p{font-size:0.97rem;color:var(--text2);line-height:1.85;margin-bottom:1.3rem;}
+.highlight-box{background:var(--gold-light);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:1.4rem 1.8rem;margin:2rem 0;font-size:0.95rem;color:var(--text);line-height:1.75;}
+.highlight-box strong{color:var(--navy);display:block;margin-bottom:0.3rem;}
+.author-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.8rem;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start;}
+.author-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);font-weight:600;flex-shrink:0;}
+.author-name{font-weight:500;font-size:0.95rem;color:var(--navy);margin-bottom:0.2rem;}
+.author-role{font-size:0.82rem;color:var(--text3);margin-bottom:0.5rem;}
+.author-bio{font-size:0.85rem;color:var(--text2);line-height:1.6;}
+.disclaimer{background:rgba(184,148,90,0.08);border-radius:12px;padding:1.2rem 1.6rem;font-size:0.83rem;color:var(--text3);line-height:1.65;margin-top:2rem;}
+.disclaimer strong{color:var(--gold);}
+.cta-article{background:var(--navy);border-radius:20px;padding:2.5rem;text-align:center;margin:3rem 0;}
+.cta-article h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:0.8rem;}
+.cta-article p{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.5rem;}
+.btn{display:inline-block;text-decoration:none;padding:0.9rem 2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;transition:all 0.22s;}
+.btn-gold{background:var(--gold);color:#fff;}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.related{padding:4rem 5vw;background:#fff;border-top:1px solid var(--line);}
+.related-inner{max-width:760px;margin:0 auto;}
+.related h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:1.5rem;}
+.related-links{display:flex;flex-direction:column;gap:0.8rem;}
+.related-link{text-decoration:none;color:var(--navy);font-size:0.9rem;padding:0.8rem 1rem;border-radius:10px;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;transition:all 0.2s;}
+.related-link:hover{border-color:var(--gold);background:var(--gold-light);}
+footer{background:#0a1218;color:rgba(255,255,255,0.3);padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;flex-wrap:wrap;gap:1rem;}
+footer a{color:rgba(255,255,255,0.3);text-decoration:none;}
+footer a:hover{color:rgba(255,255,255,0.6);}
+.footer-links{display:flex;gap:2rem;flex-wrap:wrap;}
+@media(max-width:860px){
+  nav{padding:0 4vw;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .article-body{padding:3rem 4vw;}
+  .author-box{flex-direction:column;}
+  footer{flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Max <em>Mann</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html#ueber-mich">Über mich</a></li>
+    <li><a href="index.html#angebote">Angebote</a></li>
+    <li><a href="index.html#preise">Preise</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="https://calendly.com/mann-max-l5ez/30min" target="_blank" class="nav-cta">Termin buchen</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#ueber-mich" onclick="closeMenu()">Über mich</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="index.html#kontakt" onclick="closeMenu()">Kontakt</a>
+</div>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Startseite</a> · <a href="blog.html">Blog</a> · Angst & Panikattacken</div>
+    <span class="article-cat">Angst & Panikattacken</span>
+    <h1>Panikattacken verstehen – was in Ihrem Körper wirklich passiert</h1>
+    <div class="article-meta">
+      <span>Max Mann</span>
+      <span>Juni 2025</span>
+      <span>4 Min. Lesezeit</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p class="article-lead">Eine Panikattacke fühlt sich lebensbedrohlich an. Herzrasen, Atemnot, Taubheitsgefühl, das Gefühl gleich ohnmächtig zu werden. Doch was steckt wirklich dahinter?</p>
+
+  <h2>Was ist eine Panikattacke?</h2>
+  <p>Eine Panikattacke ist eine plötzliche Welle extremer Angst, die innerhalb von Minuten ihren Höhepunkt erreicht. Die körperlichen Symptome – Herzrasen, Schwindel, Atemnot, Taubheitsgefühle – sind real. Sie entstehen jedoch nicht durch eine körperliche Erkrankung, sondern durch eine Überreaktion des Nervensystems.</p>
+
+  <div class="highlight-box">
+    <strong>Das Wichtigste zuerst:</strong>
+    Eine Panikattacke ist körperlich ungefährlich. Sie fühlt sich lebensbedrohlich an – ist es aber nicht. Sie geht von alleine wieder vorbei.
+  </div>
+
+  <h2>Was passiert im Körper?</h2>
+  <p>Unser Gehirn besitzt einen uralten Überlebensmechanismus – den sogenannten Kampf-oder-Flucht-Reflex. Nimmt ein bestimmter Bereich im Gehirn eine Gefahr wahr, schüttet der Körper sofort Adrenalin aus. Das Herz schlägt schneller, die Atmung wird flacher, die Sinne schärfen sich.</p>
+  <p>Bei einer Panikattacke reagiert der Körper genau so – obwohl keine echte Gefahr da ist. Die körperlichen Empfindungen werden dann selbst als bedrohlich wahrgenommen, was die Angst weiter verstärkt. Ein Teufelskreis entsteht.</p>
+
+  <h2>Warum passiert das – und warum gerade bei mir?</h2>
+  <p>Das ist die Frage, die die meisten Betroffenen am meisten beschäftigt. Und sie hat keine einfache allgemeine Antwort. Chronischer Stress, Schlafmangel, bestimmte Lebensphasen – all das kann eine Rolle spielen. Doch was genau bei Ihnen dahintersteckt, ist individuell.</p>
+  <p>Häufig spielen auch psychologische Muster eine Rolle, die sich über Zeit entwickelt haben. Diese zu verstehen ist oft der erste wirklich hilfreiche Schritt – und genau das ist etwas, das sich im persönlichen Gespräch herausarbeiten lässt.</p>
+
+  <h2>Was bedeutet das für Sie?</h2>
+  <p>Panikattacken sind behandelbar. Sie müssen nicht einfach damit leben. Und Sie müssen auch nicht sofort alles verstehen oder alleine herausfinden, was dahintersteckt.</p>
+  <p>Was viele Betroffene berichten: Allein das Gefühl, dass jemand zuhört der das versteht – ohne zu urteilen – kann schon eine Erleichterung sein.</p>
+
+  <div class="cta-article">
+    <h3>Sie möchten verstehen, was bei Ihnen dahintersteckt?</h3>
+    <p>In einem vertraulichen Erstgespräch schauen wir gemeinsam auf Ihre Situation – ohne Schubladen, ohne Bewertung. Kostenlos und unverbindlich.</p>
+    <a href="https://calendly.com/mann-max-l5ez/30min" target="_blank" class="btn btn-gold">Kostenloses Erstgespräch buchen</a>
+  </div>
+
+  <div class="author-box">
+    <div class="author-avatar">MM</div>
+    <div>
+      <div class="author-name">Max Mann</div>
+      <div class="author-role">B.Sc. Psychologie · Masterstudent Klinische Psychologie & Psychotherapie (KlIpPs) · Goethe-Universität Frankfurt</div>
+      <div class="author-bio">Ich biete psychologische Online-Beratung für Menschen in belastenden Lebenssituationen an – vertraulich, wissenschaftlich fundiert und ohne lange Wartezeiten.</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Hinweis:</strong> Dieser Artikel dient der allgemeinen Information und ersetzt keine professionelle psychologische oder medizinische Beratung. Bei akuten oder anhaltenden Beschwerden wenden Sie sich bitte an approbierte Fachkräfte oder im Notfall an die Telefonseelsorge (0800 111 0 111, kostenlos & 24/7).
+  </div>
+
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <h2>Weitere Artikel</h2>
+    <div class="related-links">
+      <a href="#" class="related-link"><span>Burnout erkennen bevor es zu spät ist</span><span style="color:var(--gold);font-size:0.8rem;">Demnächst →</span></a>
+      <a href="#" class="related-link"><span>Warum Prokrastination keine Faulheit ist</span><span style="color:var(--gold);font-size:0.8rem;">Demnächst →</span></a>
+      <a href="#" class="related-link"><span>Der Moment vor dem Coming-out</span><span style="color:var(--gold);font-size:0.8rem;">Demnächst →</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>© 2025 Max Mann · Psychologische Online-Beratung · Frankfurt am Main</div>
+  <div class="footer-links">
+    <a href="index.html">Startseite</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+</script>
+</body>
+</html>
