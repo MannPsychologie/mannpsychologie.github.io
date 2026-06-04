@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – Max Mann | Psychologie & Mentale Gesundheit</title>
+<meta name="description" content="Psychologische Einblicke von Max Mann – B.Sc. Psychologie, Masterstudent KlIpPs Frankfurt. Artikel zu Angst, Burnout, Beziehungen, Coming-out und mentaler Gesundheit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1923;--slate:#2d4a6b;--steel:#4a6f8a;
+  --white:#f7f9fb;--gold:#b8945a;--gold2:#d4a96a;--gold-light:#f5eed8;
+  --text:#1a2535;--text2:#4a6070;--text3:#7a9aaa;--line:rgba(15,25,35,0.1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.7;font-weight:300;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;height:68px;background:rgba(247,249,251,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--navy);text-decoration:none;letter-spacing:0.02em;}
+.nav-brand em{font-style:italic;color:var(--gold);}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--text2);font-size:0.82rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:500;}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:0.5rem 1.4rem;border-radius:2rem;font-weight:500!important;text-transform:none!important;letter-spacing:0!important;font-size:0.84rem!important;}
+.nav-cta:hover{background:var(--slate)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;border:none;background:none;}
+.hamburger span{width:22px;height:1.5px;background:var(--navy);display:block;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);padding:1.5rem 5vw 2rem;flex-direction:column;gap:1.3rem;z-index:199;}
+.mobile-menu a{text-decoration:none;color:var(--text);font-size:1rem;}
+.mobile-menu.open{display:flex;}
+
+.blog-hero{padding:120px 5vw 5rem;background:var(--navy);color:#fff;text-align:center;}
+.blog-hero-eyebrow{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;display:block;}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-bottom:1rem;}
+.blog-hero p{color:rgba(255,255,255,0.6);max-width:540px;margin:0 auto;font-size:1rem;}
+
+.blog-grid-section{padding:5rem 5vw;}
+.inner{max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.6rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);color:var(--navy);margin-bottom:2.5rem;}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.blog-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:all 0.3s;text-decoration:none;color:inherit;display:block;}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(15,25,35,0.1);border-color:transparent;}
+.blog-card-img{aspect-ratio:16/9;background:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;overflow:hidden;}
+.blog-card-img-accent{position:absolute;bottom:0;left:0;right:0;height:4px;}
+.blog-card-body{padding:1.4rem;}
+.blog-card-cat{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;display:block;}
+.blog-card h2{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.6rem;line-height:1.3;}
+.blog-card p{font-size:0.85rem;color:var(--text2);line-height:1.65;}
+.blog-card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);}
+.blog-card-date{font-size:0.75rem;color:var(--text3);}
+.blog-card-read{font-size:0.75rem;color:var(--gold);font-weight:500;}
+
+.featured-card{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;text-decoration:none;color:inherit;transition:all 0.3s;}
+.featured-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,25,35,0.1);}
+.featured-img{background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:4rem;padding:3rem;position:relative;min-height:260px;}
+.featured-img-text{position:absolute;bottom:1.5rem;left:1.5rem;}
+.featured-badge{background:var(--gold);color:#fff;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2rem;font-weight:500;}
+.featured-body{padding:2.5rem;}
+.featured-cat{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:block;}
+.featured-body h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:1rem;line-height:1.25;}
+.featured-body p{font-size:0.9rem;color:var(--text2);line-height:1.7;}
+.featured-footer{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--line);}
+
+.cta-section{background:var(--navy);padding:5rem 5vw;text-align:center;}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);color:#fff;margin-bottom:1rem;}
+.cta-section p{color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 2rem;font-size:0.95rem;}
+.btn{display:inline-block;text-decoration:none;padding:0.9rem 2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;transition:all 0.22s;}
+.btn-gold{background:var(--gold);color:#fff;}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.05);}
+
+footer{background:#0a1218;color:rgba(255,255,255,0.3);padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;flex-wrap:wrap;gap:1rem;}
+footer a{color:rgba(255,255,255,0.3);text-decoration:none;}
+footer a:hover{color:rgba(255,255,255,0.6);}
+.footer-links{display:flex;gap:2rem;flex-wrap:wrap;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:860px){
+  nav{padding:0 4vw;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .blog-grid{grid-template-columns:1fr;}
+  .featured-card{grid-template-columns:1fr;}
+  .featured-img{min-height:180px;}
+  footer{flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Max <em>Mann</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html#ueber-mich">Über mich</a></li>
+    <li><a href="index.html#angebote">Angebote</a></li>
+    <li><a href="index.html#preise">Preise</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="https://calendly.com/mann-max-l5ez/30min" target="_blank" class="nav-cta">Termin buchen</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#ueber-mich" onclick="closeMenu()">Über mich</a>
+  <a href="index.html#angebote" onclick="closeMenu()">Angebote</a>
+  <a href="index.html#preise" onclick="closeMenu()">Preise</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="index.html#kontakt" onclick="closeMenu()">Kontakt</a>
+  <a href="https://calendly.com/mann-max-l5ez/30min" target="_blank" class="btn btn-gold" style="text-align:center;">Termin buchen</a>
+</div>
+
+<div class="blog-hero">
+  <span class="blog-hero-eyebrow">Psychologie · Wissen · Orientierung</span>
+  <h1>Einblicke in die<br><em style="font-style:italic;">mentale Gesundheit</em></h1>
+  <p>Wissenschaftlich fundiert, verständlich geschrieben. Für Menschen die verstehen möchten, was in ihnen vorgeht.</p>
+</div>
+
+<section class="blog-grid-section">
+  <div class="inner">
+    <span class="section-eyebrow">Alle Artikel</span>
+    <h2 class="section-title">Was Sie hier finden</h2>
+    <div class="blog-grid">
+
+      <a href="panikattacken.html" class="featured-card reveal">
+        <div class="featured-img">
+          🧠
+          <div class="featured-img-text"><span class="featured-badge">Neuester Artikel</span></div>
+        </div>
+        <div class="featured-body">
+          <span class="featured-cat">Angst & Panikattacken</span>
+          <h2>Panikattacken verstehen – was in Ihrem Körper wirklich passiert</h2>
+          <p>Eine Panikattacke fühlt sich lebensbedrohlich an. Herzrasen, Atemnot, Taubheitsgefühl. Doch was steckt wirklich dahinter – und was hilft wirklich in diesem Moment?</p>
+          <div class="featured-footer">
+            <span class="blog-card-date">Juni 2025 · 6 Min. Lesezeit</span>
+            <span class="blog-card-read">Artikel lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card reveal">
+        <div class="blog-card-img" style="background:#e8f0f8;">💼<div class="blog-card-img-accent" style="background:var(--slate);"></div></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat">Burnout & Stress</span>
+          <h2>Burnout erkennen bevor es zu spät ist</h2>
+          <p>Die 5 frühen Warnsignale die die meisten Menschen übersehen – und was Sie jetzt tun können.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Demnächst</span>
+            <span class="blog-card-read">Bald verfügbar</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card reveal">
+        <div class="blog-card-img" style="background:#f0e8f5;">🏳️‍🌈<div class="blog-card-img-accent" style="background:#9b59b6;"></div></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat">LGBTQ+ & Coming-out</span>
+          <h2>Der Moment vor dem Coming-out – was ihn so schwer macht</h2>
+          <p>Nicht das Coming-out selbst ist oft das Schwerste. Es ist die Zeit davor. Was Psychologie darüber sagt.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Demnächst</span>
+            <span class="blog-card-read">Bald verfügbar</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card reveal">
+        <div class="blog-card-img" style="background:#f5f0e8;">⏰<div class="blog-card-img-accent" style="background:var(--gold);"></div></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat">Prokrastination</span>
+          <h2>Warum Prokrastination keine Faulheit ist</h2>
+          <p>Das Gehirn reagiert auf unangenehme Aufgaben wie auf echten Schmerz. Was dahintersteckt und wie Sie ausbrechen.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Demnächst</span>
+            <span class="blog-card-read">Bald verfügbar</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card reveal">
+        <div class="blog-card-img" style="background:#e8f5f0;">💑<div class="blog-card-img-accent" style="background:var(--steel);"></div></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat">Partnerschaft & Beziehungen</span>
+          <h2>Wenn Streiten zur Gewohnheit wird – was Paare falsch machen</h2>
+          <p>Die häufigsten Kommunikationsmuster die Beziehungen belasten – und wie man sie durchbricht.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Demnächst</span>
+            <span class="blog-card-read">Bald verfügbar</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Haben Sie ein Thema das Sie beschäftigt?</h2>
+  <p>Ein erstes Gespräch ist kostenlos und unverbindlich. Ich höre zu – ohne Bewertung, ohne Schublade.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="https://calendly.com/mann-max-l5ez/30min" target="_blank" class="btn btn-gold">Kostenloses Erstgespräch</a>
+    <a href="index.html" class="btn btn-outline-white">Zur Website</a>
+  </div>
+</div>
+
+<footer>
+  <div>© 2025 Max Mann · Psychologische Online-Beratung · Frankfurt am Main</div>
+  <div class="footer-links">
+    <a href="index.html">Startseite</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
